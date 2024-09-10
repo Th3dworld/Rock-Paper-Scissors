@@ -28,3 +28,34 @@ function getComputerChoice(){
     return computerPlay;
 }
 
+function getHumanChoice(){
+    //output prompt to get user choice
+    let playNumber = parseInt(prompt("What would you like to play?\n1. Rock\n2.Paper\n3.Scissors\nInput a numeric value between 1-3 to select your option:"));
+
+    //Validate input
+    while(playNumber < 1 || playNumber > 3){
+        playNumber = parseInt(prompt("ERROR!\nPlease select an option from the list below\n1. Rock\n2.Paper\n3.Scissors\nInput a numeric value between 1-3 to select your option:"));
+    }
+    //Variable to hold human move
+    let humanPlay;
+
+    //Use number returned to variable playNumber in switch statement to give a value to the humanPlay variable
+    switch(playNumber-1){
+        case 0:
+            humanPlay = "Rock";
+            break;
+        case 1:
+            humanPlay = "Paper";
+            break;
+        case 2:
+            humanPlay = "Scissors";
+            break;
+        default:
+            humanPlay = "I will never be returned";
+    }
+
+    //return human's play
+    return humanPlay;
+}
+
+console.log(getHumanChoice());
