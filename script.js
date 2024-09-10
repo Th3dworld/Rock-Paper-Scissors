@@ -1,3 +1,7 @@
+//Declare variables to keep track of scores
+let humanScore = 0;
+let computerScore = 0;
+
 //This function is used to get the computers play in the game
 function getComputerChoice(){
     //First generate a random number between 1 and 2, 2 inclusive.
@@ -28,6 +32,7 @@ function getComputerChoice(){
     return computerPlay;
 }
 
+//This function is used to get the human's play in the game
 function getHumanChoice(){
     //output prompt to get user choice
     let playNumber = parseInt(prompt("What would you like to play?\n1. Rock\n2.Paper\n3.Scissors\nInput a numeric value between 1-3 to select your option:"));
@@ -52,10 +57,32 @@ function getHumanChoice(){
             break;
         default:
             humanPlay = "I will never be returned";
-    }
+    }1
 
     //return human's play
     return humanPlay;
 }
 
-console.log(getHumanChoice());
+let playRound = (humanChoice, computerChoice) => {
+    if(humanChoice === computerChoice){
+        console.log("Draw")
+    }else if(humanChoice === "Rock" && computerChoice === "Paper"){
+        console.log("You lose!Paper beats Rock.")
+        computerScore++;
+    }else if(humanChoice === "Scissors" && computerChoice === "Rock"){
+        console.log("You lose!Rock beats Scissors.")
+        computerScore++;
+    }else if(humanChoice === "Paper" && computerChoice === "Scissors"){
+        console.log("You lose!Scissors beats Paper.")
+        computerScore++;
+    }else if(humanChoice === "Paper" && computerChoice === "Rock"){
+        console.log("You win!Paper beats Rock.")
+        humanScore++;
+    }else if(humanChoice === "Rock" && computerChoice === "Scissors"){
+        console.log("You win!Rock beats Scissors.")
+        humanScore++;
+    }else if(humanChoice === "Scissors" && computerChoice === "Paper"){
+        console.log("You win!Scissors beats Paper.")
+        humanScore++;
+    }
+}
