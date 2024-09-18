@@ -1,3 +1,4 @@
+
 //get buttons
 const buttons = document.querySelector("#buttons");
 const playerInfo = document.querySelector("#playerdets");
