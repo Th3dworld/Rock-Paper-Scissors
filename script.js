@@ -1,11 +1,12 @@
 //get buttons
 const buttons = document.querySelector("#buttons");
-const playerInfo = document.querySelector("#playerDets");
+const playerInfo = document.querySelector("#playerdets");
 const score = document.querySelector("#scoreCount");
 const showWinner = document.querySelector("#displayWinner");
 
+
 //Add text Content at start of game
-playerInfo.textContent = `Human         Computer`;
+playerInfo.textContent = `Human Computer`;
 
 buttons.addEventListener('click', (e) => {
     //reset winner display data
