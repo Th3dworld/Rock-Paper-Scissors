@@ -53,7 +53,7 @@ function getHumanChoice(){
             break;
         default:
             humanPlay = "I will never be returned";
-    }1
+    }
 
     //return human's play
     return humanPlay;
