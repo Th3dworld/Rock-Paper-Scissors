@@ -93,11 +93,6 @@ let playGame = () => {
         }
     }
 
-    while(numberOfRounds < 5){
-        playRound(getHumanChoice(),getComputerChoice());
-        numberOfRounds++;
-    }
-
     console.log(`Scores\nHuman:${humanScore}\t\tComputer:${computerScore}`);
 
 }
