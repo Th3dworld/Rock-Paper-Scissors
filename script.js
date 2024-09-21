@@ -140,7 +140,6 @@ let playRound = (humanChoice, computerChoice) => {
 console.log(`Scores\nHuman:${humanScore}\t\tComputer:${computerScore}`);
 
 
-playGame()
 
 //Find way to stop responsiveness for a few seconds and then continuing the game after the score has been displayed.
-//Add CSS to stylise the page and center everything!
+//Add CSS to stylise the page and center everything
