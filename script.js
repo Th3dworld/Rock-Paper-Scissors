@@ -1,4 +1,3 @@
-
 //get buttons
 const buttons = document.querySelector("#buttons");
 const playerInfo = document.querySelector("#playerdets");
@@ -58,43 +57,9 @@ function getComputerChoice(){
     return computerPlay;
 }
 
-//This function is used to get the human's play in the game
-function getHumanChoice(){
-    //output prompt to get user choice
-    let playNumber = parseInt(prompt("What would you like to play?\n1. Rock\n2.Paper\n3.Scissors\nInput a numeric value between 1-3 to select your option:"));
-
-    //Validate input
-    while(playNumber < 1 || playNumber > 3){
-        playNumber = parseInt(prompt("ERROR!\nPlease select an option from the list below\n1. Rock\n2.Paper\n3.Scissors\nInput a numeric value between 1-3 to select your option:"));
-    }
-    //Variable to hold human move
-    let humanPlay;
-
-    //Use number returned to variable playNumber in switch statement to give a value to the humanPlay variable
-    switch(playNumber-1){
-        case 0:
-            humanPlay = "Rock";
-            break;
-        case 1:
-            humanPlay = "Paper";
-            break;
-        case 2:
-            humanPlay = "Scissors";
-            break;
-        default:
-            humanPlay = "I will never be returned";
-    }1
-
-    //return human's play
-    return humanPlay;
-}
-
-
-
-let playGame = () => {
-    //Declare variables to keep track of scores
-
-    let numberOfRounds = 0;
+//Score tracking variables
+let humanScore = 0;
+let computerScore = 0;
 
 //This function allows the user to play a single round of the game
 let playRound = (humanChoice, computerChoice) => {
@@ -140,6 +105,7 @@ let playRound = (humanChoice, computerChoice) => {
 console.log(`Scores\nHuman:${humanScore}\t\tComputer:${computerScore}`);
 
 
+playGame()
 
 //Find way to stop responsiveness for a few seconds and then continuing the game after the score has been displayed.
-//Add CSS to stylise the page and center everything
+//Add CSS to stylise the page and center everything!
